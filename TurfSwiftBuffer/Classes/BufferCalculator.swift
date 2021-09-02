@@ -2,15 +2,14 @@
 //  BufferCalculator.swift
 //  TurfSwiftBuffer
 //
-//  Created by Jongkwon.kim on 09/02/2021.
-//  Copyright (c) 2021 Jongkwon.kim. All rights reserved.
+//  Created by 김종권 on 2021/09/02.
 //
 
 import Turf
 import CoreLocation
 
-class BufferCalculator {
-    typealias PolygonCoordinate = [CLLocationCoordinate2D]
+public class BufferCalculator {
+    public typealias PolygonCoordinate = [CLLocationCoordinate2D]
 
     static public func makeBufferedCoordinate(_ polygonCoordinates: [PolygonCoordinate], bufferDistnace: Double) -> [PolygonCoordinate] {
         var bufferedCoordinates: [PolygonCoordinate] = [[]]
