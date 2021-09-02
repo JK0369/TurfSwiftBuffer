@@ -25,6 +25,7 @@ pod 'TurfSwiftBuffer'
 
 - Given polygon coordinates, transform them into coordinates with an internal buffer.
 ```
+
 class ViewController: UIViewController {
 
     lazy var mapView: MKMapView = {
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
 
         /// 35km
         let bufferDistance: Double = 35_000
-        let bufferedPolygon = BufferCalculator.makeBufferedCoordinate([polygon], bufferDistnace: bufferDistance)
+        let bufferedPolygon = BufferCalculator.makeBufferedCoordinate([polygon], bufferDistnace: bufferDistance, isInsideBuffer: false)
 
         for i in 0..<bufferedPolygon.count {
             for j in 0..<bufferedPolygon[i].count {
@@ -72,11 +73,21 @@ class ViewController: UIViewController {
             }
         }
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
 }
+
+
 ```
-- ![스크린샷 2021-09-02 오후 5 54 44](https://user-images.githubusercontent.com/43035817/131815276-71202c7b-ae31-4f49-a5f8-04d0f8c8dd4b.png)
-
-
+  
+|Inner buffer|Outter buffer|
+|------|---|
+|![스크린샷 2021-09-02 오후 5 54 44](https://user-images.githubusercontent.com/43035817/131815276-71202c7b-ae31-4f49-a5f8-04d0f8c8dd4b.png)|![스크린샷 2021-09-02 오후 6 19 37](https://user-images.githubusercontent.com/43035817/131819287-9c9f532e-e91c-4bab-880b-e9ba25d42e31.png)|
+   
 ## Author
 
 Jongkwon.kim, palatable7@naver.com
