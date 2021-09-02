@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
         /// 35km
         let bufferDistance: Double = 35_000
-        let bufferedPolygon = BufferCalculator.makeBufferedCoordinate([polygon], bufferDistnace: bufferDistance)
+        let bufferedPolygon = BufferCalculator.makeBufferedCoordinate([polygon], bufferDistnace: bufferDistance, isInsideBuffer: false)
 
         for i in 0..<bufferedPolygon.count {
             for j in 0..<bufferedPolygon[i].count {

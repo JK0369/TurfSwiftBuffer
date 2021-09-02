@@ -11,7 +11,9 @@ import CoreLocation
 public class BufferCalculator {
     public typealias PolygonCoordinate = [CLLocationCoordinate2D]
 
-    static public func makeBufferedCoordinate(_ polygonCoordinates: [PolygonCoordinate], bufferDistnace: Double) -> [PolygonCoordinate] {
+    static public func makeBufferedCoordinate(_ polygonCoordinates: [PolygonCoordinate],
+                                              bufferDistnace: Double,
+                                              isInsideBuffer: Bool) -> [PolygonCoordinate] {
         var bufferedCoordinates: [PolygonCoordinate] = [[]]
 
         polygonCoordinates.forEach { polygonCoordinate in
@@ -33,7 +35,8 @@ public class BufferCalculator {
                                                        left: leftCoordinate,
                                                        right: rightCoordinate,
                                                        bufferDistance: bufferDistnace,
-                                                       polygonCoordinate: polygonCoordinate)
+                                                       polygonCoordinate: polygonCoordinate,
+                                                       isInsideBuffer: isInsideBuffer)
 
                     calculatedPolygon.append(targetVector)
                 } else if originCoordinate != rightCoordinate {
@@ -44,7 +47,8 @@ public class BufferCalculator {
                                                        left: leftCoordinate,
                                                        right: rightCoordinate,
                                                        bufferDistance: bufferDistnace,
-                                                       polygonCoordinate: polygonCoordinate)
+                                                       polygonCoordinate: polygonCoordinate,
+                                                       isInsideBuffer: isInsideBuffer)
 
                     calculatedPolygon.append(targetVector)
                 }
@@ -61,7 +65,8 @@ public class BufferCalculator {
                                  left: CLLocationCoordinate2D,
                                  right: CLLocationCoordinate2D,
                                  bufferDistance: Double,
-                                 polygonCoordinate: PolygonCoordinate) -> CLLocationCoordinate2D {
+                                 polygonCoordinate: PolygonCoordinate,
+                                 isInsideBuffer: Bool) -> CLLocationCoordinate2D {
 
         let intermidiateLeftVector = (left - origin) / (origin.distance(to: left))
         let intermidiateRightVector = (right - origin) / (origin.distance(to: right))
@@ -70,7 +75,7 @@ public class BufferCalculator {
         var targetVector = origin + (targetDirectionVector / (origin.distance(to: origin + targetDirectionVector)) * bufferDistance)
 
         // When a vector is obtained out of the coverage area, point symmetry
-        if !contains(point: targetVector, for: [polygonCoordinate]) {
+        if !contains(point: targetVector, for: [polygonCoordinate]) == isInsideBuffer {
             targetVector = origin + (-targetDirectionVector / (origin.distance(to: origin + targetDirectionVector)) * bufferDistance)
         }
 
