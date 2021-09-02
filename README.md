@@ -21,6 +21,16 @@ it, simply add the following line to your Podfile:
 pod 'TurfSwiftBuffer'
 ```
 
+## Logic
+
+- Internal Buffer: Calculate using a vector the inner coordinates you want to find in a polygon of coordinates p1, p2, ... p6
+  - ex) Inner coordinates of p1: obtained by adding the left p2 vector of p1 and the right p6 vector of p1
+![image](https://user-images.githubusercontent.com/43035817/131820021-7048414d-f321-4d52-b10c-38ec48afc271.png)
+
+- Method to get the inner coordinate of p1: `getCenterVector(origin:left:right:bufferDistance:polygonCoordinate:isInsideBuffer:)`
+  - Change each left and right vector to an origin vector of length 1 > Sum of left and right vectors > Acquire the final internal coordinates by applying translation and the length of the vector
+![image](https://user-images.githubusercontent.com/43035817/131820138-8be692d3-3e9b-429e-b597-6631c751961f.png)
+
 ## Using
 
 - Given polygon coordinates, transform them into coordinates with an internal buffer.
