@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TurfSwiftBuffer'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'create a buffer with coordinates'
 
 # This description is used to generate tags and improve search results.
@@ -38,5 +38,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Turf'
+  s.dependency 'Turf', '~> 1.2'
 end

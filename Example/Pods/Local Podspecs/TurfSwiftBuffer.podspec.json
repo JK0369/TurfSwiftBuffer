@@ -22,7 +22,7 @@
   "source_files": "TurfSwiftBuffer/Classes/**/*",
   "dependencies": {
     "Turf": [
-
+      "~> 1.2"
     ]
   },
   "swift_version": "5.0"

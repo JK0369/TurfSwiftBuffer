@@ -6,7 +6,7 @@ PODS:
     - FBSnapshotTestCase/Core
   - Turf (1.2.0)
   - TurfSwiftBuffer (1.0.0):
-    - Turf
+    - Turf (~> 1.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Turf: aaa060138b11a8e979a19e6d81091d156a31bc58
-  TurfSwiftBuffer: 47ddbae81d4b5906c7d5d6cec8956552ddbb8612
+  TurfSwiftBuffer: f541f8fb577eb51e55688a4599021a8813a0daba
 
 PODFILE CHECKSUM: cf0683bb592044049fc8afa4dd3ab0fb882efa9a
 
