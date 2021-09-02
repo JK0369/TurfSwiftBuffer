@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         for i in 0..<bufferedPolygon.count {
             for j in 0..<bufferedPolygon[i].count {
                 let point = MKPointAnnotation()
-                point.title = "buffered(\(i))"
+                point.title = "buffered(\(j))"
                 point.coordinate = bufferedPolygon[i][j]
                 mapView.addAnnotation(point)
             }
