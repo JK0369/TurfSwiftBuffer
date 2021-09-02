@@ -175,9 +175,11 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Turf/Turf.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TurfSwiftBuffer/TurfSwiftBuffer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Turf/Turf.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TurfSwiftBuffer/TurfSwiftBuffer.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

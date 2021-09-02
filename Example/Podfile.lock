@@ -4,7 +4,9 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - TurfSwiftBuffer (0.1.0)
+  - Turf (1.2.0)
+  - TurfSwiftBuffer (1.0.0):
+    - Turf
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -13,6 +15,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - Turf
 
 EXTERNAL SOURCES:
   TurfSwiftBuffer:
@@ -20,8 +23,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  TurfSwiftBuffer: eea3257ee23b8034f07c151d2c71d4a9bdaec79a
+  Turf: aaa060138b11a8e979a19e6d81091d156a31bc58
+  TurfSwiftBuffer: 47ddbae81d4b5906c7d5d6cec8956552ddbb8612
 
-PODFILE CHECKSUM: d130a106d2f664264b1463ddf42abf90eee6d787
+PODFILE CHECKSUM: cf0683bb592044049fc8afa4dd3ab0fb882efa9a
 
 COCOAPODS: 1.10.1

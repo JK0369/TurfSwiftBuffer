@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TurfSwiftBuffer'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'create a buffer with coordinates'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/JK0369/TurfSwiftBuffer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.swift_version = '5.0'
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'TurfSwiftBuffer/Classes/**/*'
   
@@ -38,5 +38,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Turf'
 end
