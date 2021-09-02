@@ -1,0 +1,6 @@
+framework module Pods_TurfSwiftBuffer_Tests {
+  umbrella header "Pods-TurfSwiftBuffer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

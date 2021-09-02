@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TurfSwiftBuffer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TurfSwiftBuffer.'
+  s.summary          = 'create a buffer with coordinates'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Use when you want to get coordinates with a buffer of a certain distance inside or outside from polygonal coordinates
                        DESC
 
   s.homepage         = 'https://github.com/JK0369/TurfSwiftBuffer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'JK0369' => 'palatable7@naver.com' }
+  s.author           = { 'JongKwonKim' => 'palatable7@naver.com' }
   s.source           = { :git => 'https://github.com/JK0369/TurfSwiftBuffer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'TurfSwiftBuffer/Classes/**/*'
   

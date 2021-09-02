@@ -1,0 +1,6 @@
+framework module TurfSwiftBuffer {
+  umbrella header "TurfSwiftBuffer-umbrella.h"
+
+  export *
+  module * { export * }
+}
