@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         for i in 0..<bufferedPolygon.count {
             for j in 0..<bufferedPolygon[i].count {
                 let point = MKPointAnnotation()
-                point.title = "buffered(\(i))"
+                point.title = "buffered(\(j))"
                 point.coordinate = bufferedPolygon[i][j]
                 mapView.addAnnotation(point)
             }
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
   
 |Inner buffer|Outter buffer|
 |------|---|
-|![스크린샷 2021-09-02 오후 5 54 44](https://user-images.githubusercontent.com/43035817/131815276-71202c7b-ae31-4f49-a5f8-04d0f8c8dd4b.png)|![스크린샷 2021-09-02 오후 6 19 37](https://user-images.githubusercontent.com/43035817/131819287-9c9f532e-e91c-4bab-880b-e9ba25d42e31.png)|
+|![image](https://user-images.githubusercontent.com/43035817/131823192-e58ed8ed-3206-402b-9c55-ff4b853e0bba.png)|![image](https://user-images.githubusercontent.com/43035817/131823140-11c9175d-5a47-4cca-8166-6925871bfa6e.png) |
    
 ## Author
 
