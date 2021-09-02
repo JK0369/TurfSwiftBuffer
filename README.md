@@ -31,7 +31,7 @@ pod 'TurfSwiftBuffer'
   - 1) Change each left and right vector to an origin vector of length 1
   - 2) Sum of left and right vectors
   - 3) Acquire the final internal coordinates by applying translation and the length of the vector
-![image](https://user-images.githubusercontent.com/43035817/131820138-8be692d3-3e9b-429e-b597-6631c751961f.png)
+![image](https://user-images.githubusercontent.com/43035817/131843038-100857a7-5141-4caa-ab7a-0ad4f4bc01b0.png)
 
 ## Using
 
